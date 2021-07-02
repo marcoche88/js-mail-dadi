@@ -30,7 +30,7 @@ if (!userMail || userMail.length < 3) {
 } 
 
 // controllare se e-mail è presente nell'array
-for (i = 0; i < emails.length; i++) {
+for (var i = 0; i < emails.length; i++) {
     console.log("i=", i, " ", emails[i]);
 
     if (emails[i] === userMail) {
