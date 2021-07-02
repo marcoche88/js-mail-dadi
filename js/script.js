@@ -25,7 +25,7 @@ var userMail = prompt("Inserisci la tua mail").trim().toLowerCase();
 console.log("userMail: ", userMail);
 
 // validazione
-if (!userMail) {
+if (!userMail || userMail.length < 3) {
     window.location.reload();
 } 
 
@@ -39,7 +39,7 @@ for (i = 0; i < emails.length; i++) {
 }
 
 // stampa messaggio
-if (existMail == true) {
+if (existMail) {
     login.innerHTML = "E-mail corretta. Accesso effettuato";
 } else {
     login.innerHTML = "E-mail non valida";
